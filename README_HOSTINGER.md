@@ -41,7 +41,7 @@ This guide explains how to deploy this full-stack AI Tools application to Hostin
 
 ## 5. Troubleshooting
 - **Database**: The app uses SQLite (`tools.db`). This file will be created automatically on the server. It is ignored by Git to prevent local data from overwriting server data.
-- **Native Modules**: We've used `better-sqlite3@11.3.0` for broader compatibility with older GLIBC versions (common on some shared hosting environments). If you still encounter issues, try `npm install better-sqlite3 --build-from-source` in your Hostinger terminal.
+- **Native Modules**: We've used the latest version of `better-sqlite3` which provides prebuilt binaries for most environments. If you encounter permission issues during installation on Hostinger, try `npm install better-sqlite3 --build-from-source` or ensure your Node.js version is 20+.
 - **Port**: The app is configured to run on port 3000, which Hostinger's proxy will automatically map to your domain.
 
 ## 6. Security
